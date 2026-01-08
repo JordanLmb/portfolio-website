@@ -38,8 +38,9 @@
         "Tailwind CSS",
         "TypeScript"
       ],
-      "image": "/images/portfolio.jpg",
-      "link": "https://github.com/jordanlmb/portfolio-website"
+      "image": "/images/portfolio.png",
+      "link": "https://github.com/jordanlmb/portfolio-website",
+      "video": "/images/portfolio-demo.mp4"
     }
   ],
   "fr": [
@@ -81,8 +82,9 @@
         "Tailwind CSS",
         "TypeScript"
       ],
-      "image": "/images/portfolio.jpg",
-      "link": "https://github.com/jordanlmb/portfolio-website"
+      "image": "/images/portfolio.png",
+      "link": "https://github.com/jordanlmb/portfolio-website",
+      "video": "/images/portfolio-demo.mp4"
     }
   ]
 }

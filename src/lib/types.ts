@@ -6,4 +6,5 @@ export interface Project {
   techStack: string[];
   image: string;
   link: string;
+  video?: string;
 }
