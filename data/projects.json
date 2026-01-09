@@ -62,7 +62,7 @@
       "id": "link-shortener",
       "title": "Raccourcisseur de Lien",
       "slug": "scalable-link-shortener",
-      "description": "Raccourcisseur d'URL haute performance conçu pour l'échelle avec mise en cache Redis et stockage PostgreSQL.",
+      "description": "Raccourcisseur d'URL haute performance conçu pour être hautement évolutif avec mise en cache Redis et stockage PostgreSQL.",
       "techStack": [
         "Python",
         "FastAPI",

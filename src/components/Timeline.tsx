@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface Education {
     institution: string;
@@ -19,6 +20,7 @@ interface TimelineProps {
 }
 
 export default function Timeline({ education }: TimelineProps) {
+    const { language } = useLanguage();
     return (
         <ol className="relative border-l border-gray-200 dark:border-gray-700 ml-4 space-y-12">
             {education.map((edu, index) => (
@@ -68,7 +70,7 @@ export default function Timeline({ education }: TimelineProps) {
                             </h3>
                         </div>
                         <p className="mb-1 text-base font-normal text-gray-500 dark:text-gray-400">
-                            {edu.studyType} in <span className="font-medium text-gray-900 dark:text-white">{edu.area}</span>
+                            {edu.studyType} {language === 'en' ? 'in' : 'en'} <span className="font-medium text-gray-900 dark:text-white">{edu.area}</span>
                         </p>
                         {edu.score && (
                             <p className="text-sm text-green-600 dark:text-green-400 mb-2">GPA: {edu.score}</p>
