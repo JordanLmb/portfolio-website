@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { clsx } from "clsx";
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Code2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 
@@ -43,7 +43,8 @@ export default function Navbar() {
     return (
         <nav className="fixed top-0 w-full bg-white/80 dark:bg-black/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
             <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center relative z-50">
-                <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">
+                <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
+                    <Code2 className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                     {t.nav.logo}
                 </span>
 
