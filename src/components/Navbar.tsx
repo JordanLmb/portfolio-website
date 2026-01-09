@@ -9,22 +9,6 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Simple SVG Flags
-const CAFlag = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" className="w-5 h-5 rounded-sm">
-        <path fill="#EF3340" d="M0 0h36v36H0z" />
-        <path fill="#FFF" d="M9 0h18v36H9z" />
-        <path fill="#EF3340" d="M18.8 14.8l-1.6-4h-2.1l-2.1 5.3-2.6-1.1v2.1l3 1.1-1.1 4.2h1.6l1.1-2.6.5 2.6H17l.5-2.6 1.1 2.6H20l-1.1-4.2 3.2-1.1v-2.1l-2.7 1.1z" />
-    </svg>
-);
-
-const FRFlag = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" className="w-5 h-5 rounded-sm">
-        <path fill="#002395" d="M0 0h12v36H0z" />
-        <path fill="#ED2939" d="M24 0h12v36H24z" />
-        <path fill="#FFF" d="M12 0h12v36H12z" />
-    </svg>
-);
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -85,7 +69,17 @@ export default function Navbar() {
                             onClick={toggleLanguage}
                             className="flex items-center gap-2 px-2 py-1 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                         >
-                            {language === "en" ? (<><CAFlag /> EN (CA)</>) : (<><FRFlag /> FR</>)}
+                            {language === "en" ? (
+                                <>
+                                    <img src="/icons/ca.svg" alt="Canada Flag" className="w-6 h-auto rounded-sm" />
+                                    EN
+                                </>
+                            ) : (
+                                <>
+                                    <img src="/icons/fr.svg" alt="France Flag" className="w-6 h-auto rounded-sm" />
+                                    FR
+                                </>
+                            )}
                         </button>
                         <ThemeToggle />
                     </div>
@@ -131,7 +125,17 @@ export default function Navbar() {
                                 onClick={toggleLanguage}
                                 className="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
                             >
-                                {language === "en" ? (<><CAFlag /> EN (CA)</>) : (<><FRFlag /> FR</>)}
+                                {language === "en" ? (
+                                    <>
+                                        <img src="/icons/ca.svg" alt="Canada Flag" className="w-6 h-auto rounded-sm" />
+                                        EN
+                                    </>
+                                ) : (
+                                    <>
+                                        <img src="/icons/fr.svg" alt="France Flag" className="w-6 h-auto rounded-sm" />
+                                        FR
+                                    </>
+                                )}
                             </button>
                             <ThemeToggle />
                         </div>
