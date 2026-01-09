@@ -11,7 +11,7 @@ export const translations = {
         nav: {
             home: "Home",
             about: "About",
-            logo: "Jordanlmb.dev"
+            logo: "Jordanlmb.com"
         },
         projects: {
             title: "Featured Projects",
@@ -30,7 +30,7 @@ export const translations = {
         nav: {
             home: "Accueil",
             about: "À propos",
-            logo: "Jordanlmb.dev"
+            logo: "Jordanlmb.com"
         },
         projects: {
             title: "Projets à la une",

@@ -18,12 +18,11 @@ export default function Navbar() {
     return (
         <nav className="fixed top-0 w-full bg-white/80 dark:bg-black/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
             <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
-                <Link
-                    href="/"
-                    className="font-bold text-xl tracking-tight text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                <span
+                    className="font-bold text-xl tracking-tight text-gray-900 dark:text-white"
                 >
                     {t.nav.logo}
-                </Link>
+                </span>
 
                 <div className="flex items-center gap-6">
                     <div className="hidden md:flex gap-4 text-sm font-medium">
