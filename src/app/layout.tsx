@@ -39,6 +39,32 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50 dark:bg-black text-gray-900 dark:text-white`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Jordan Lambert",
+              "url": "https://jordanlmb.com",
+              "jobTitle": "Software Engineer",
+              "alumniOf": [
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "ÉTS Montréal"
+                },
+                {
+                  "@type": "CollegeOrUniversity",
+                  "name": "Polytech Montpellier"
+                }
+              ],
+              "sameAs": [
+                "https://github.com/jordanlmb",
+                "https://linkedin.com/in/jordanlmb"
+              ]
+            }),
+          }}
+        />
         <Providers>
           <Navbar />
           {children}
