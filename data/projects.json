@@ -30,7 +30,7 @@
     },
     {
       "id": "portfolio",
-      "title": "Master Portfolio",
+      "title": "My Portfolio",
       "slug": "master-portfolio",
       "description": "This very website! A Next.js 15 application showcasing my development journey.",
       "techStack": [
@@ -74,7 +74,7 @@
     },
     {
       "id": "portfolio",
-      "title": "Portfolio Master",
+      "title": "Mon Portfolio",
       "slug": "master-portfolio",
       "description": "Ce site web ! Une application Next.js 15 présentant mon parcours de développeur.",
       "techStack": [
