@@ -14,18 +14,32 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     const [isHovered, setIsHovered] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
 
+    // Reset hover state on touch devices/unmount
+    useEffect(() => {
+        return () => setIsHovered(false);
+    }, []);
+
+    // Only enable hover logic on non-touch (fine pointer) devices
+    const handleMouseEnter = () => {
+        if (window.matchMedia("(hover: hover)").matches) {
+            setIsHovered(true);
+        }
+    };
+
     useEffect(() => {
         if (videoRef.current) {
             if (isHovered) {
                 // Reset to 0 relative to itself to ensure it replays on re-hover
                 videoRef.current.currentTime = 0;
-                videoRef.current.play().catch(error => {
-                    console.log("Video play prevented:", error);
-                });
+                const playPromise = videoRef.current.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(error => {
+                        console.log("Video play prevented:", error);
+                        setIsHovered(false); // Fallback if autoplay fails
+                    });
+                }
             } else {
                 videoRef.current.pause();
-                // We do NOT reset here to avoid flickering logic, but we could. 
-                // Resetting on hover start is safer for "Replay".
                 videoRef.current.currentTime = 0;
             }
         }
@@ -38,8 +52,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.link}
             target="_blank"
             className="block max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 transition-transform hover:scale-105 duration-300 group"
-            onMouseEnter={() => setIsHovered(true)}
+            onMouseEnter={handleMouseEnter}
             onMouseLeave={() => setIsHovered(false)}
+            onTouchStart={() => setIsHovered(false)} // Ensure touch doesn't trigger hover stuck state
         >
             <div className="h-48 w-full bg-gray-200 rounded-t-lg flex items-center justify-center text-gray-400 relative overflow-hidden">
                 {/* Static Image / Placeholder */}
