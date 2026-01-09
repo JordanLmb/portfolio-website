@@ -17,10 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://jordanlmb.com'),
-  title: "Jordan Lambert | Computer Engineer & Full Stack Developer",
-  description: "Portfolio of Jordan Lambert, a Computer Engineer specializing in Full Stack Development, DevOps, and AI. Based in Montreal.",
+  title: "Jordan Lambert | Software Engineer & Full Stack Developer",
+  description: "Portfolio of Jordan Lambert, a Software Engineer specializing in Full Stack Development, DevOps, and AI. Based in Montreal.",
   openGraph: {
-    title: "Jordan Lambert | Computer Engineer",
+    title: "Jordan Lambert | Software Engineer",
     description: "Explore the portfolio of Jordan Lambert, featuring projects in AI, Web Development, and Automation.",
     url: 'https://jordanlmb.com',
     siteName: 'Jordanlmb.com',
