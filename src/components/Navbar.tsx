@@ -5,58 +5,139 @@ import ThemeToggle from "./ThemeToggle";
 import { usePathname } from "next/navigation";
 import { clsx } from "clsx";
 import { useLanguage } from "@/context/LanguageContext";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+// Simple SVG Flags
+const CAFlag = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" className="w-5 h-5 rounded-sm">
+        <path fill="#EF3340" d="M0 0h36v36H0z" />
+        <path fill="#FFF" d="M9 0h18v36H9z" />
+        <path fill="#EF3340" d="M18.8 14.8l-1.6-4h-2.1l-2.1 5.3-2.6-1.1v2.1l3 1.1-1.1 4.2h1.6l1.1-2.6.5 2.6H17l.5-2.6 1.1 2.6H20l-1.1-4.2 3.2-1.1v-2.1l-2.7 1.1z" />
+    </svg>
+);
+
+const FRFlag = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" className="w-5 h-5 rounded-sm">
+        <path fill="#002395" d="M0 0h12v36H0z" />
+        <path fill="#ED2939" d="M24 0h12v36H24z" />
+        <path fill="#FFF" d="M12 0h12v36H12z" />
+    </svg>
+);
 
 export default function Navbar() {
     const pathname = usePathname();
     const isHome = pathname === "/";
     const { language, setLanguage, t } = useLanguage();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    // Close menu when route changes
+    useEffect(() => {
+        setIsMenuOpen(false);
+    }, [pathname]);
+
+    // Prevent scrolling when menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => { document.body.style.overflow = 'unset'; }
+    }, [isMenuOpen]);
 
     const toggleLanguage = () => {
         setLanguage(language === "en" ? "fr" : "en");
     };
 
+    const navLinks = [
+        { href: "/", label: t.nav.home },
+        { href: "/about", label: t.nav.about }
+    ];
+
     return (
         <nav className="fixed top-0 w-full bg-white/80 dark:bg-black/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
-            <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center">
-                <span
-                    className="font-bold text-xl tracking-tight text-gray-900 dark:text-white"
-                >
+            <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center relative z-50">
+                <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">
                     {t.nav.logo}
                 </span>
 
-                <div className="flex items-center gap-6">
-                    <div className="hidden md:flex gap-4 text-sm font-medium">
-                        <Link
-                            href="/"
-                            className={clsx(
-                                "transition-colors hover:text-blue-600 dark:hover:text-blue-400",
-                                isHome ? "text-blue-600 dark:text-blue-400" : "text-gray-600 dark:text-gray-400"
-                            )}
-                        >
-                            {t.nav.home}
-                        </Link>
-                        <Link
-                            href="/about"
-                            className={clsx(
-                                "transition-colors hover:text-blue-600 dark:hover:text-blue-400",
-                                pathname === "/about" ? "text-blue-600 dark:text-blue-400" : "text-gray-600 dark:text-gray-400"
-                            )}
-                        >
-                            {t.nav.about}
-                        </Link>
+                {/* Desktop Menu */}
+                <div className="hidden md:flex items-center gap-6">
+                    <div className="flex gap-4 text-sm font-medium">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                className={clsx(
+                                    "transition-colors hover:text-blue-600 dark:hover:text-blue-400",
+                                    pathname === link.href ? "text-blue-600 dark:text-blue-400" : "text-gray-600 dark:text-gray-400"
+                                )}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
                     </div>
 
                     <div className="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700">
                         <button
                             onClick={toggleLanguage}
-                            className="px-2 py-1 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                            className="flex items-center gap-2 px-2 py-1 text-sm font-medium rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                         >
-                            {language === "en" ? "🇺🇸 EN" : "🇫🇷 FR"}
+                            {language === "en" ? (<><CAFlag /> EN (CA)</>) : (<><FRFlag /> FR</>)}
                         </button>
                         <ThemeToggle />
                     </div>
                 </div>
+
+                {/* Mobile Menu Button */}
+                <button
+                    className="md:hidden p-2 text-gray-600 dark:text-gray-300"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
+                    {isMenuOpen ? <X /> : <Menu />}
+                </button>
             </div>
+
+            {/* Mobile Dropdown */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        className="md:hidden absolute top-[60px] left-0 w-full bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 shadow-lg px-4 py-6 flex flex-col gap-6"
+                    >
+                        <div className="flex flex-col gap-4 text-lg font-medium text-center">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    className={clsx(
+                                        "py-2 transition-colors",
+                                        pathname === link.href
+                                            ? "text-blue-600 dark:text-blue-400"
+                                            : "text-gray-900 dark:text-white"
+                                    )}
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
+                        </div>
+
+                        <div className="flex items-center justify-center gap-4 pt-4 border-t border-gray-200 dark:border-gray-800">
+                            <button
+                                onClick={toggleLanguage}
+                                className="flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-md bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white"
+                            >
+                                {language === "en" ? (<><CAFlag /> EN (CA)</>) : (<><FRFlag /> FR</>)}
+                            </button>
+                            <ThemeToggle />
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </nav>
     );
 }
