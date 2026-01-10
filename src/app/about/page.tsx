@@ -76,7 +76,7 @@ export default function AboutPage() {
                             <a
                                 href={language === 'en' ? "/CV_Jordan_LAMBERT_EN.pdf" : "/CV_Jordan_LAMBERT_FR.pdf"}
                                 download
-                                className="ml-auto md:ml-0 inline-flex items-center gap-2 px-6 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full font-medium text-sm hover:opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                className="inline-flex items-center gap-2 px-6 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full font-medium text-sm hover:opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                             >
                                 <Download className="w-4 h-4" />
                                 {language === 'en' ? "Download Resume" : "Télécharger CV"}

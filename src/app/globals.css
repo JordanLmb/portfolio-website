@@ -3,8 +3,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Enforce Dark/Purple Theme defaults even in "light" mode */
+  --background: #020617;
+  /* Slate-950/Black base */
+  --foreground: #f8fafc;
+  /* Slate-50 text */
+  --card-bg: rgba(30, 41, 59, 0.4);
+  /* Slate-800 with opacity */
+  --card-border: rgba(255, 255, 255, 0.1);
 }
 
 @theme inline {
@@ -14,13 +20,10 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* 
-  With next-themes, we handle colors via the .dark class on html/body.
-  We can redefine the variables under .dark selector.
-*/
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  /* Same variables for dark mode to ensure consistency */
+  --background: #020617;
+  --foreground: #f8fafc;
 }
 
 html {
@@ -28,7 +31,18 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(circle at top left, #1e1b4b, #020617, #0f172a);
+  /* Indigo-950 -> Slate-950 -> Slate-900 */
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }

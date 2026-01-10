@@ -32,9 +32,9 @@
       "id": "portfolio",
       "title": "My Portfolio",
       "slug": "master-portfolio",
-      "description": "This very website! A Next.js 15 application showcasing my development journey.",
+      "description": "This very website! A Next.js application showcasing my development journey.",
       "techStack": [
-        "Next.js 15",
+        "Next.js",
         "Tailwind CSS",
         "TypeScript"
       ],
@@ -76,9 +76,9 @@
       "id": "portfolio",
       "title": "Mon Portfolio",
       "slug": "master-portfolio",
-      "description": "Ce site web ! Une application Next.js 15 présentant mon parcours de développeur.",
+      "description": "Ce site web ! Une application Next.js présentant mon parcours de développeur.",
       "techStack": [
-        "Next.js 15",
+        "Next.js",
         "Tailwind CSS",
         "TypeScript"
       ],
