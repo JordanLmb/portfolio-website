@@ -51,7 +51,7 @@ export default function Navbar() {
         <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isMenuOpen || scrolled ? 'bg-[#020617]/90 backdrop-blur-md' : 'glass'}`}>
             <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center relative z-50">
                 <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-                    <Code2 className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                    <Code2 className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                     {t.nav.logo}
                 </span>
 
@@ -63,8 +63,8 @@ export default function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={clsx(
-                                    "transition-colors hover:text-blue-600 dark:hover:text-blue-400",
-                                    pathname === link.href ? "text-blue-600 dark:text-blue-400" : "text-gray-600 dark:text-gray-400"
+                                    "transition-colors hover:text-purple-600 dark:hover:text-purple-400",
+                                    pathname === link.href ? "text-purple-600 dark:text-purple-400" : "text-gray-600 dark:text-gray-400"
                                 )}
                             >
                                 {link.label}
@@ -119,7 +119,7 @@ export default function Navbar() {
                                     className={clsx(
                                         "py-2 transition-colors",
                                         pathname === link.href
-                                            ? "text-blue-600 dark:text-blue-400"
+                                            ? "text-purple-600 dark:text-purple-400"
                                             : "text-gray-900 dark:text-white"
                                     )}
                                 >
