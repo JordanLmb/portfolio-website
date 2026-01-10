@@ -12,7 +12,8 @@
         "AI/CV"
       ],
       "image": "/images/work_in_progress.png",
-      "link": "https://github.com/jordanlmb/tcg-ai-scanner"
+      "repoUrl": "https://github.com/jordanlmb/tcg-ai-scanner",
+      "isPrivate": false
     },
     {
       "id": "link-shortener",
@@ -26,7 +27,8 @@
         "PostgreSQL"
       ],
       "image": "/images/work_in_progress.png",
-      "link": "https://github.com/jordanlmb/scalable-link-shortener"
+      "repoUrl": "https://github.com/jordanlmb/scalable-link-shortener",
+      "isPrivate": false
     },
     {
       "id": "portfolio",
@@ -39,8 +41,10 @@
         "TypeScript"
       ],
       "image": "/images/portfolio.png",
-      "link": "https://github.com/jordanlmb/portfolio-website",
-      "video": "/images/portfolio-demo.mp4"
+      "video": "/images/portfolio-demo.mp4",
+      "repoUrl": "https://github.com/jordanlmb/portfolio-website",
+      "demoUrl": "https://jordanlmb.com",
+      "isPrivate": false
     }
   ],
   "fr": [
@@ -56,7 +60,8 @@
         "IA/CV"
       ],
       "image": "/images/work_in_progress.png",
-      "link": "https://github.com/jordanlmb/tcg-ai-scanner"
+      "repoUrl": "https://github.com/jordanlmb/tcg-ai-scanner",
+      "isPrivate": false
     },
     {
       "id": "link-shortener",
@@ -70,7 +75,8 @@
         "PostgreSQL"
       ],
       "image": "/images/work_in_progress.png",
-      "link": "https://github.com/jordanlmb/scalable-link-shortener"
+      "repoUrl": "https://github.com/jordanlmb/scalable-link-shortener",
+      "isPrivate": false
     },
     {
       "id": "portfolio",
@@ -83,8 +89,10 @@
         "TypeScript"
       ],
       "image": "/images/portfolio.png",
-      "link": "https://github.com/jordanlmb/portfolio-website",
-      "video": "/images/portfolio-demo.mp4"
+      "video": "/images/portfolio-demo.mp4",
+      "repoUrl": "https://github.com/jordanlmb/portfolio-website",
+      "demoUrl": "https://jordanlmb.com",
+      "isPrivate": false
     }
   ]
 }
