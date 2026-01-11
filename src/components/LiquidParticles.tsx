@@ -84,7 +84,35 @@ export default function LiquidParticles() {
             }
         };
 
+        const handleTouch = (e: TouchEvent) => {
+            const touch = e.touches[0];
+            const { clientX, clientY } = touch;
+
+            // "Splash" Effect: Spawn a ring of particles radiating outward
+            const splashCount = 6;
+            for (let i = 0; i < splashCount; i++) {
+                const angle = (Math.PI * 2 * i) / splashCount;
+                const speed = 2 + Math.random(); // Fast outward burst
+
+                // Random color interpolation
+                const r = 59 + Math.random() * (147 - 59);
+                const g = 130 + Math.random() * (51 - 130);
+                const b = 246 + Math.random() * (234 - 246);
+
+                drops.current.push({
+                    x: clientX,
+                    y: clientY,
+                    vx: Math.cos(angle) * speed,
+                    vy: Math.sin(angle) * speed,
+                    radius: Math.random() * 20 + 10,
+                    life: 1.2, // Slightly longer life for ripple
+                    color: `rgba(${Math.floor(r)}, ${Math.floor(g)}, ${Math.floor(b)}`
+                });
+            }
+        };
+
         window.addEventListener("mousemove", handleMouseMove);
+        window.addEventListener("touchstart", handleTouch);
 
         const render = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -135,6 +163,7 @@ export default function LiquidParticles() {
         return () => {
             window.removeEventListener("resize", resizeCanvas);
             window.removeEventListener("mousemove", handleMouseMove);
+            window.removeEventListener("touchstart", handleTouch);
             cancelAnimationFrame(animationFrameId.current);
         };
     }, [resolvedTheme, mounted]);

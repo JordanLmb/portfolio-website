@@ -72,9 +72,9 @@ export default function AboutPage() {
                             <a href={`mailto:${data.basics.email}`} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-[#6366f1] transition-colors">
                                 <Mail className="w-4 h-4" /> {data.basics.email}
                             </a>
-                            <span className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                            <a href={`tel:${data.basics.phone}`} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-[#6366f1] transition-colors">
                                 <Phone className="w-4 h-4" /> {data.basics.phone}
-                            </span>
+                            </a>
                             <span className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                                 <MapPin className="w-4 h-4" /> {data.basics.location}
                             </span>
