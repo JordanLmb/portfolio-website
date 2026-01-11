@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTheme } from "next-themes";
 
 interface TrailDrop {
@@ -16,11 +16,19 @@ interface TrailDrop {
 export default function LiquidParticles() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
     const drops = useRef<TrailDrop[]>([]);
     const animationFrameId = useRef<number>(0);
     const lastPos = useRef({ x: 0, y: 0 });
 
+    // Handle hydration mismatch
     useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (!mounted) return;
+
         const canvas = canvasRef.current;
         if (!canvas) return;
 
@@ -129,11 +137,15 @@ export default function LiquidParticles() {
             window.removeEventListener("mousemove", handleMouseMove);
             cancelAnimationFrame(animationFrameId.current);
         };
-    }, [resolvedTheme]);
+    }, [resolvedTheme, mounted]);
+
+    // Dynamic Z-Index: Behind content in Light Mode (-1), On top of text in Dark Mode (50)
 
     // Dynamic Z-Index: Behind content in Light Mode (-1), On top of text in Dark Mode (50)
 
     const isDark = resolvedTheme === 'dark';
+
+    if (!mounted) return null;
 
     return (
         <canvas
