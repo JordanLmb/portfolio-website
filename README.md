@@ -20,8 +20,11 @@ Built with modern web technologies, this site focuses on performance, accessibil
 *   **🎨 AI-Driven UI/UX**: Clean, minimalist design with glassmorphism effects and staggered entrance animations.
 *   **🌍 Internaltionalization (i18n)**: Full English and French support with auto-detection and preference persistence (LocalStorage).
 *   **🌗 Dark Mode**: Seamless theme switching that respects system preferences.
+*   **💧 Dual-Mode Liquid Physics**: A custom Canvas-based particle engine with unique physics for each theme:
+    *   **Light Mode**: Viscous, fluid trails that follow the cursor.
+    *   **Dark Mode**: "Reveal" mechanics where particles ignite only on text hover, creating a bioluminescent effect.
 *   **🎬 Interactive Project Cards**: Hover-triggered video previews (HTML5 Video) for a dynamic showcase.
-*   **📱 Fully Responsive**: Optimized for all devices, from mobile phones to large desktop screens.
+*   **📱 Fully Responsive**: Optimized for all devices with touch-friendly interactions and clickable action links (Phone/Email).
 *   **⚡ High Performance**: Utilizing Next.js Server Components and optimized asset loading.
 
 ## 🚀 Getting Started
