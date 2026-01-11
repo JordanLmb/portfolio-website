@@ -112,7 +112,6 @@ export default function LiquidParticles() {
         };
 
         window.addEventListener("mousemove", handleMouseMove);
-        window.addEventListener("touchstart", handleTouch);
 
         const render = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -163,7 +162,6 @@ export default function LiquidParticles() {
         return () => {
             window.removeEventListener("resize", resizeCanvas);
             window.removeEventListener("mousemove", handleMouseMove);
-            window.removeEventListener("touchstart", handleTouch);
             cancelAnimationFrame(animationFrameId.current);
         };
     }, [resolvedTheme, mounted]);
