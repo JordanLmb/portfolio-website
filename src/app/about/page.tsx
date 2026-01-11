@@ -40,9 +40,11 @@ export default function AboutPage() {
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400"
+                            className="text-4xl md:text-5xl font-extrabold tracking-tight"
                         >
-                            <ParticleText>{data.basics.name}</ParticleText>
+                            <ParticleText className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                                {data.basics.name}
+                            </ParticleText>
                         </motion.h1>
                         <motion.h2
                             initial={{ opacity: 0, y: 10 }}
@@ -58,7 +60,7 @@ export default function AboutPage() {
                             transition={{ delay: 0.2, duration: 0.5 }}
                             className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto md:mx-0"
                         >
-                            {data.basics.summary}
+                            <ParticleText>{data.basics.summary}</ParticleText>
                         </motion.p>
 
                         <motion.div
