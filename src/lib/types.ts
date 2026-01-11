@@ -6,5 +6,8 @@ export interface Project {
   techStack: string[];
   image: string;
   link: string;
+  repoUrl?: string;
+  demoUrl?: string;
+  isPrivate?: boolean;
   video?: string;
 }

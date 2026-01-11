@@ -3,8 +3,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  /* Enforce Dark/Purple Theme defaults even in "light" mode */
-  --background: #020617;
+  /* Light Theme defaults */
+  --background: #f8fafc;
+  --foreground: #0f172a;
   /* Slate-950/Black base */
   --foreground: #f8fafc;
   /* Slate-50 text */
@@ -21,7 +22,7 @@
 }
 
 .dark {
-  /* Same variables for dark mode to ensure consistency */
+  /* Dark Mode Variables */
   --background: #020617;
   --foreground: #f8fafc;
 }
@@ -31,18 +32,29 @@ html {
 }
 
 body {
-  background: radial-gradient(circle at top left, #1e1b4b, #020617, #0f172a);
-  /* Indigo-950 -> Slate-950 -> Slate-900 */
+  background: radial-gradient(circle at top left, #f8fafc, #f1f5f9, #e2e8f0);
+  /* Slate-50 -> Slate-100 -> Slate-200 */
   background-attachment: fixed;
-  color: var(--foreground);
+  color: #0f172a;
+  /* Default text color for light mode */
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
 }
 
+.dark body {
+  background: radial-gradient(circle at top left, #1e1b4b, #020617, #0f172a);
+  /* Indigo-950 -> Slate-950 -> Slate-900 */
+  color: var(--foreground);
+}
+
 /* Glassmorphism Utility */
 .glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08);
+  /* Increased opacity for visibility */
+  backdrop-filter: blur(16px);
+  /* Stronger blur */
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* More visible border */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }

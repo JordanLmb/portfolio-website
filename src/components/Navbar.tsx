@@ -48,11 +48,23 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isMenuOpen || scrolled ? 'bg-[#020617]/90 backdrop-blur-md' : 'glass'}`}>
+        <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isMenuOpen || scrolled ? 'bg-white/30 backdrop-blur-xl border-0 border-b border-white/10 dark:bg-gray-900/50 dark:backdrop-blur-xl' : 'bg-transparent border-b border-transparent'}`}>
             <div className="max-w-screen-xl mx-auto px-4 py-3 flex justify-between items-center relative z-50">
                 <span className="font-bold text-xl tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-                    <Code2 className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                    {t.nav.logo}
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <defs>
+                            <linearGradient id="nav-logo-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor="#2563eb" />
+                                <stop offset="100%" stopColor="#9333ea" />
+                            </linearGradient>
+                        </defs>
+                        <path stroke="url(#nav-logo-gradient)" d="m18 16 4-4-4-4" />
+                        <path stroke="url(#nav-logo-gradient)" d="m6 8-4 4 4 4" />
+                        <path stroke="url(#nav-logo-gradient)" d="m14.5 4-5 16" />
+                    </svg>
+                    <span className="bg-gradient-to-tr from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        {t.nav.logo}
+                    </span>
                 </span>
 
                 {/* Desktop Menu */}
@@ -63,8 +75,8 @@ export default function Navbar() {
                                 key={link.href}
                                 href={link.href}
                                 className={clsx(
-                                    "transition-colors hover:text-purple-600 dark:hover:text-purple-400",
-                                    pathname === link.href ? "text-purple-600 dark:text-purple-400" : "text-gray-600 dark:text-gray-400"
+                                    "transition-colors hover:text-[#6366f1] dark:hover:text-[#818cf8]",
+                                    pathname === link.href ? "text-[#6366f1] dark:text-[#818cf8]" : "text-gray-600 dark:text-gray-400"
                                 )}
                             >
                                 {link.label}

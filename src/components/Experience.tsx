@@ -28,19 +28,21 @@ export default function ExperienceSection({ experience }: ExperienceProps) {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:shadow-md transition-shadow"
+                    className="p-6 border border-gray-200 rounded-lg shadow-sm backdrop-blur-md bg-white/75 dark:bg-white/5 dark:border-white/10 dark:glass hover:shadow-md transition-shadow"
                 >
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                         <div className="flex gap-4 items-start">
                             {/* Logo if available */}
                             {exp.logo && (
-                                <div className="flex-shrink-0 w-12 h-12 bg-white rounded-lg border border-gray-100 overflow-hidden flex items-center justify-center">
-                                    <img src={exp.logo} alt={`${exp.name} logo`} className="w-full h-full object-contain" />
+                                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-tr from-blue-500 to-purple-600 p-[3px] shadow-sm">
+                                    <div className="w-full h-full bg-white rounded-[6px] overflow-hidden flex items-center justify-center">
+                                        <img src={exp.logo} alt={`${exp.name} logo`} className="w-full h-full object-contain" />
+                                    </div>
                                 </div>
                             )}
                             <div>
                                 <h3 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                                    {!exp.logo && <Briefcase className="w-5 h-5 text-blue-600 dark:text-blue-400" />}
+                                    {!exp.logo && <Briefcase className="w-5 h-5 text-[#6366f1] dark:text-[#818cf8]" />}
                                     {exp.position}
                                 </h3>
                                 <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
@@ -49,7 +51,7 @@ export default function ExperienceSection({ experience }: ExperienceProps) {
                             </div>
                         </div>
                         <div className="text-right ml-auto">
-                            <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300 block mb-1 w-fit md:ml-auto">
+                            <span className="bg-[#e0e7ff] text-[#3730a3] text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-[#312e81]/50 dark:text-[#c7d2fe] block mb-1 w-fit md:ml-auto">
                                 {exp.startDate} - {exp.endDate}
                             </span>
                             {exp.location && (

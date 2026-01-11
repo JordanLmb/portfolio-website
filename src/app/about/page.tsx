@@ -6,13 +6,17 @@ import ExperienceSection from "@/components/Experience";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Download } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import LiquidParticles from "@/components/LiquidParticles";
+import ParticleText from "@/components/ParticleText";
 
 export default function AboutPage() {
     const { language } = useLanguage();
     const data = resumeData[language];
 
     return (
+        // Reverting to standard layout since we are using fixed particles now
         <main className="min-h-screen text-gray-900 dark:text-white transition-colors duration-300">
+            <LiquidParticles />
             <div className="pt-24 pb-16 px-4 max-w-4xl mx-auto space-y-20">
 
                 {/* Header / Bio */}
@@ -38,13 +42,13 @@ export default function AboutPage() {
                             transition={{ duration: 0.5 }}
                             className="text-4xl md:text-5xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400"
                         >
-                            {data.basics.name}
+                            <ParticleText>{data.basics.name}</ParticleText>
                         </motion.h1>
                         <motion.h2
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1, duration: 0.5 }}
-                            className="text-xl text-blue-600 dark:text-blue-400 font-medium"
+                            className="text-xl text-[#6366f1] font-medium"
                         >
                             {data.basics.label}
                         </motion.h2>
@@ -63,7 +67,7 @@ export default function AboutPage() {
                             transition={{ delay: 0.3, duration: 0.5 }}
                             className="flex flex-wrap gap-4 justify-center md:justify-start pt-4"
                         >
-                            <a href={`mailto:${data.basics.email}`} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                            <a href={`mailto:${data.basics.email}`} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-[#6366f1] transition-colors">
                                 <Mail className="w-4 h-4" /> {data.basics.email}
                             </a>
                             <span className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
@@ -76,7 +80,7 @@ export default function AboutPage() {
                             <a
                                 href={language === 'en' ? "/CV_Jordan_LAMBERT_EN.pdf" : "/CV_Jordan_LAMBERT_FR.pdf"}
                                 download
-                                className="inline-flex items-center gap-2 px-6 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-black rounded-full font-medium text-sm hover:opacity-90 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                                className="inline-flex items-center gap-2 px-6 py-2.5 bg-gradient-to-tr from-blue-600 to-purple-600 text-white rounded-full font-medium text-sm hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-purple-500/30 transform hover:-translate-y-0.5"
                             >
                                 <Download className="w-4 h-4" />
                                 {language === 'en' ? "Download Resume" : "Télécharger CV"}
@@ -94,7 +98,9 @@ export default function AboutPage() {
                         transition={{ duration: 0.5 }}
                     >
                         <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                            {language === 'en' ? "Professional Experience" : "Expérience Professionnelle"}
+                            <ParticleText>
+                                {language === 'en' ? "Professional Experience" : "Expérience Professionnelle"}
+                            </ParticleText>
                             <div className="h-px bg-gradient-to-r from-gray-200 to-transparent dark:from-gray-700 flex-grow ml-4"></div>
                         </h3>
                         <ExperienceSection experience={data.experience} />
@@ -110,14 +116,16 @@ export default function AboutPage() {
                         transition={{ duration: 0.5 }}
                     >
                         <h3 className="text-2xl font-bold mb-8 flex items-center gap-3">
-                            {language === 'en' ? "Education Journey" : "Parcours Académique"}
+                            <ParticleText>
+                                {language === 'en' ? "Education Journey" : "Parcours Académique"}
+                            </ParticleText>
                             <div className="h-px bg-gradient-to-r from-gray-200 to-transparent dark:from-gray-700 flex-grow ml-4"></div>
                         </h3>
                         <Timeline education={data.education} />
                     </motion.div>
                 </section>
 
-            </div>
-        </main>
+            </div >
+        </main >
     );
 }

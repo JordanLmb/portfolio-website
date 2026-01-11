@@ -2,6 +2,8 @@
 
 import Hero from "@/components/Hero";
 import ProjectCard from "@/components/ProjectCard";
+import LiquidParticles from "@/components/LiquidParticles";
+import ParticleText from "@/components/ParticleText";
 import projectsData from "../../data/projects.json";
 import { useLanguage } from "@/context/LanguageContext";
 import { Project } from "@/lib/types";
@@ -29,7 +31,8 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50 dark:bg-black transition-colors duration-300">
+    <main className="min-h-screen text-gray-900 dark:text-white transition-colors duration-300">
+      <LiquidParticles />
       <Hero />
 
       <motion.section
@@ -41,7 +44,7 @@ export default function Home() {
         viewport={{ once: true }}
       >
         <motion.h2 variants={item} className="mb-8 text-3xl font-extrabold tracking-tight text-center text-gray-900 dark:text-white">
-          {t.projects.title}
+          <ParticleText>{t.projects.title}</ParticleText>
         </motion.h2>
         <motion.div variants={item} className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
           {projects.map((project) => (

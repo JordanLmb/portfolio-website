@@ -45,13 +45,15 @@ export default function Timeline({ education }: TimelineProps) {
                         whileInView={{ scale: 1 }}
                         transition={{ type: "spring", stiffness: 260, damping: 20, delay: index * 0.2 + 0.1 }}
                         viewport={{ once: true }}
-                        className="absolute flex items-center justify-center w-10 h-10 bg-white rounded-full -left-[52px] ring-8 ring-white dark:ring-gray-900 dark:bg-gray-800 overflow-hidden border border-gray-200 dark:border-gray-700 z-10"
+                        className="absolute flex items-center justify-center w-12 h-12 rounded-full -left-[56px] bg-gradient-to-tr from-blue-500 to-purple-600 z-10 p-[3px]"
                     >
-                        {edu.logo ? (
-                            <img src={edu.logo} alt={edu.institution} className="w-full h-full object-cover" />
-                        ) : (
-                            <GraduationCap className="w-5 h-5 text-blue-800 dark:text-blue-300 relative z-10" />
-                        )}
+                        <div className="w-full h-full bg-white dark:bg-gray-800 rounded-full flex items-center justify-center overflow-hidden">
+                            {edu.logo ? (
+                                <img src={edu.logo} alt={edu.institution} className="w-full h-full object-cover" />
+                            ) : (
+                                <GraduationCap className="w-6 h-6 text-[#6366f1] dark:text-[#818cf8] relative z-10" />
+                            )}
+                        </div>
                     </motion.span>
 
                     {/* Restored Pulse Effect (behind the logo) */}
@@ -60,10 +62,10 @@ export default function Timeline({ education }: TimelineProps) {
                         whileInView={{ scale: 2, opacity: 0 }}
                         transition={{ duration: 0.8, repeat: 0, delay: index * 0.2 + 0.1 }} // Single ping
                         viewport={{ once: true }}
-                        className="absolute w-10 h-10 rounded-full bg-blue-400 dark:bg-blue-600 -left-[52px] top-0 -z-10"
+                        className="absolute w-12 h-12 rounded-full bg-[#6366f1] dark:bg-[#818cf8] -left-[56px] top-0 -z-10"
                     />
 
-                    <div className="p-4 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 hover:shadow-md transition-shadow">
+                    <div className="p-4 border border-gray-200 rounded-lg shadow-sm backdrop-blur-md bg-white/75 dark:bg-white/5 dark:border-white/10 dark:glass hover:shadow-md transition-shadow">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
                             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                                 {edu.institution}
