@@ -29,7 +29,8 @@
         "Recharts",
         "Supabase"
       ],
-      "image": "/images/work_in_progress.png",
+      "image": "/images/cardvalue.png",
+      "video": "/images/cardvalue.mp4",
       "repoUrl": "https://github.com/JordanLmb/CardValue",
       "demoUrl": "https://jordanlmb.com/CardValue",
       "isPrivate": false
@@ -96,7 +97,8 @@
         "Recharts",
         "Supabase"
       ],
-      "image": "/images/work_in_progress.png",
+      "image": "/images/cardvalue.png",
+      "video": "/images/cardvalue.mp4",
       "repoUrl": "https://github.com/JordanLmb/CardValue",
       "demoUrl": "https://jordanlmb.com/CardValue",
       "isPrivate": false
