@@ -5,11 +5,11 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/CardValue",
-        destination: "https://card-value-ashen.vercel.app",
+        destination: "https://card-value-ashen.vercel.app/CardValue",
       },
       {
         source: "/CardValue/:path*",
-        destination: "https://card-value-ashen.vercel.app/:path*",
+        destination: "https://card-value-ashen.vercel.app/CardValue/:path*",
       },
     ];
   },
