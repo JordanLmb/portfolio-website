@@ -16,6 +16,25 @@
       "isPrivate": false
     },
     {
+      "id": "card-value",
+      "title": "CardValue - TCG Collection Visualizer",
+      "slug": "card-value",
+      "description": "A beautiful dashboard for tracking Trading Card Game collection values across Pokemon, Magic, and Yu-Gi-Oh. Features CSV bulk upload, inline editing, and cloud persistence.",
+      "techStack": [
+        "Next.js 16",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Framer Motion",
+        "Recharts",
+        "Supabase"
+      ],
+      "image": "/images/work_in_progress.png",
+      "repoUrl": "https://github.com/JordanLmb/CardValue",
+      "demoUrl": "https://jordanlmb.com/CardValue",
+      "isPrivate": false
+    },
+    {
       "id": "link-shortener",
       "title": "Scalable Link Shortener",
       "slug": "scalable-link-shortener",
@@ -61,6 +80,25 @@
       ],
       "image": "/images/work_in_progress.png",
       "repoUrl": "https://github.com/jordanlmb/tcg-ai-scanner",
+      "isPrivate": false
+    },
+    {
+      "id": "card-value",
+      "title": "CardValue - Visualiseur JCC",
+      "slug": "card-value",
+      "description": "Un tableau de bord magnifique pour suivre la valeur de vos collections de cartes (Pokemon, Magic, Yu-Gi-Oh). Fonctionnalités d'upload CSV, édition en ligne et persistance cloud.",
+      "techStack": [
+        "Next.js 16",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Framer Motion",
+        "Recharts",
+        "Supabase"
+      ],
+      "image": "/images/work_in_progress.png",
+      "repoUrl": "https://github.com/JordanLmb/CardValue",
+      "demoUrl": "https://jordanlmb.com/CardValue",
       "isPrivate": false
     },
     {
