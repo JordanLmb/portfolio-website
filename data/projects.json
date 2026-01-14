@@ -1,21 +1,6 @@
 {
   "en": [
     {
-      "id": "tcg-scanner",
-      "title": "TCG AI Scanner",
-      "slug": "tcg-ai-scanner",
-      "description": "A mobile-first application using AI to identify Trading Card Game cards and fetch real-time market data.",
-      "techStack": [
-        "Python",
-        "FastAPI",
-        "React Native",
-        "AI/CV"
-      ],
-      "image": "/images/work_in_progress.png",
-      "repoUrl": "https://github.com/jordanlmb/tcg-ai-scanner",
-      "isPrivate": false
-    },
-    {
       "id": "card-value",
       "title": "CardValue - TCG Collection Visualizer",
       "slug": "card-value",
@@ -33,21 +18,6 @@
       "video": "/images/cardvalue.mp4",
       "repoUrl": "https://github.com/JordanLmb/CardValue",
       "demoUrl": "https://jordanlmb.com/CardValue",
-      "isPrivate": false
-    },
-    {
-      "id": "link-shortener",
-      "title": "Scalable Link Shortener",
-      "slug": "scalable-link-shortener",
-      "description": "High-performance URL shortener built for scale with Redis caching and PostgreSQL storage.",
-      "techStack": [
-        "Python",
-        "FastAPI",
-        "Redis",
-        "PostgreSQL"
-      ],
-      "image": "/images/work_in_progress.png",
-      "repoUrl": "https://github.com/jordanlmb/scalable-link-shortener",
       "isPrivate": false
     },
     {
@@ -69,21 +39,6 @@
   ],
   "fr": [
     {
-      "id": "tcg-scanner",
-      "title": "Scanner IA TCG",
-      "slug": "tcg-ai-scanner",
-      "description": "Application mobile utilisant l'IA pour identifier les cartes de jeux (TCG) et obtenir les prix du marché en temps réel.",
-      "techStack": [
-        "Python",
-        "FastAPI",
-        "React Native",
-        "IA/CV"
-      ],
-      "image": "/images/work_in_progress.png",
-      "repoUrl": "https://github.com/jordanlmb/tcg-ai-scanner",
-      "isPrivate": false
-    },
-    {
       "id": "card-value",
       "title": "CardValue - Visualiseur JCC",
       "slug": "card-value",
@@ -101,21 +56,6 @@
       "video": "/images/cardvalue.mp4",
       "repoUrl": "https://github.com/JordanLmb/CardValue",
       "demoUrl": "https://jordanlmb.com/CardValue",
-      "isPrivate": false
-    },
-    {
-      "id": "link-shortener",
-      "title": "Raccourcisseur de Lien",
-      "slug": "scalable-link-shortener",
-      "description": "Raccourcisseur d'URL haute performance conçu pour être hautement évolutif avec mise en cache Redis et stockage PostgreSQL.",
-      "techStack": [
-        "Python",
-        "FastAPI",
-        "Redis",
-        "PostgreSQL"
-      ],
-      "image": "/images/work_in_progress.png",
-      "repoUrl": "https://github.com/jordanlmb/scalable-link-shortener",
       "isPrivate": false
     },
     {
