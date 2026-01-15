@@ -13,11 +13,11 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/bms",
-        destination: "https://ev-bms-showcase.vercel.app",
+        destination: "https://ev-bms-showcase.vercel.app/bms",
       },
       {
         source: "/bms/:path*",
-        destination: "https://ev-bms-showcase.vercel.app/:path*",
+        destination: "https://ev-bms-showcase.vercel.app/bms/:path*",
       },
     ];
   },
