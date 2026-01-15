@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/bms",
-        destination: "https://ev-bms-showcase.vercel.app/",
+        destination: "https://ev-bms-showcase.vercel.app",
       },
       {
         source: "/bms/:path*",
