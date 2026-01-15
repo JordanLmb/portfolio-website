@@ -61,7 +61,7 @@
       "id": "bms-simulator",
       "title": "Simulateur Virtual HIL BMS",
       "slug": "bms-simulator",
-      "description": "Simulateur HIL exécutant une logique BMS Python. Vérifie les systèmes de sécurité via l'automatisation QA.",
+      "description": "Simulateur HIL exécutant une logique BMS Python. Vérifie la sécurité via l'automatisation QA.",
       "techStack": [
         "Next.js",
         "Web Workers",
