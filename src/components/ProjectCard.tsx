@@ -49,7 +49,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
     return (
         <div
-            className="group block w-full max-w-sm bg-white/75 backdrop-blur-md dark:bg-white/5 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-200 dark:border-white/10"
+            className="group flex flex-col w-full max-w-sm bg-white/75 backdrop-blur-md dark:bg-white/5 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-200 dark:border-white/10"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={() => setIsHovered(false)}
             onTouchStart={() => setIsHovered(false)}
@@ -82,7 +82,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
             </div>
 
-            <div className="p-6 relative">
+            <div className="p-6 relative flex flex-col flex-1">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white group-hover:text-[#6366f1] dark:group-hover:text-[#818cf8] transition-colors">
                     {project.title}
                 </h5>
