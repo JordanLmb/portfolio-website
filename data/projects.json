@@ -16,7 +16,7 @@
       "image": "/images/bms.png",
       "video": "/images/bms.mp4",
       "repoUrl": "https://github.com/JordanLmb/ev-bms-showcase",
-      "demoUrl": "https://ev-bms-showcase.vercel.app",
+      "demoUrl": "https://jordanlmb.com/bms",
       "isPrivate": false
     },
     {
@@ -63,7 +63,7 @@
       "slug": "bms-simulator",
       "description": "Simulateur HIL (Hardware-in-the-Loop) exécutant une logique de contrôle BMS Python réelle dans le navigateur. Démontre l'automatisation QA avancée pour les systèmes critiques.",
       "techStack": [
-        "Next.js 15",
+        "Next.js",
         "Web Workers",
         "Python (Pyodide)",
         "Zustand",
@@ -73,7 +73,7 @@
       "image": "/images/bms.png",
       "video": "/images/bms.mp4",
       "repoUrl": "https://github.com/JordanLmb/ev-bms-showcase",
-      "demoUrl": "https://ev-bms-showcase.vercel.app",
+      "demoUrl": "https://jordanlmb.com/bms",
       "isPrivate": false
     },
     {
