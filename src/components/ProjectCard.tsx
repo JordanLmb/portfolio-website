@@ -83,7 +83,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </div>
 
             <div className="p-6 relative flex flex-col flex-1">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white group-hover:text-[#6366f1] dark:group-hover:text-[#818cf8] transition-colors">
+                <h5 className="mb-2 h-16 text-2xl font-bold tracking-tight text-gray-900 dark:text-white group-hover:text-[#6366f1] dark:group-hover:text-[#818cf8] transition-colors line-clamp-2">
                     {project.title}
                 </h5>
                 <p className="mb-4 text-gray-600 dark:text-gray-300 text-sm leading-relaxed h-12 line-clamp-2">
@@ -91,7 +91,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 </p>
 
                 {/* Tech Stack Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-6 h-16 content-start overflow-hidden">
                     {project.techStack.map((tech) => (
                         <span key={tech} className="bg-[#e0e7ff] dark:bg-[#312e81]/30 border border-[#c7d2fe] dark:border-[#4338ca]/30 text-[#4338ca] dark:text-[#a5b4fc] text-xs font-medium px-2.5 py-0.5 rounded-full backdrop-blur-sm">
                             {tech}
