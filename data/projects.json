@@ -1,6 +1,25 @@
 {
   "en": [
     {
+      "id": "bms-simulator",
+      "title": "Virtual HIL BMS Simulator",
+      "slug": "bms-simulator",
+      "description": "A 'Hardware-in-the-Loop' (HIL) simulator running real Python BMS control logic inside the browser. Demonstrates advanced QA Automation by verifying safety-critical systems.",
+      "techStack": [
+        "Next.js 15",
+        "Web Workers",
+        "Python (Pyodide)",
+        "Zustand",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "image": "/images/bms.png",
+      "video": "/images/bms.mp4",
+      "repoUrl": "https://github.com/JordanLmb/ev-bms-showcase",
+      "demoUrl": "https://ev-bms-showcase.vercel.app",
+      "isPrivate": false
+    },
+    {
       "id": "card-value",
       "title": "CardValue - TCG Collection Visualizer",
       "slug": "card-value",
@@ -38,6 +57,25 @@
     }
   ],
   "fr": [
+    {
+      "id": "bms-simulator",
+      "title": "Simulateur Virtual HIL BMS",
+      "slug": "bms-simulator",
+      "description": "Simulateur HIL (Hardware-in-the-Loop) exécutant une logique de contrôle BMS Python réelle dans le navigateur. Démontre l'automatisation QA avancée pour les systèmes critiques.",
+      "techStack": [
+        "Next.js 15",
+        "Web Workers",
+        "Python (Pyodide)",
+        "Zustand",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "image": "/images/bms.png",
+      "video": "/images/bms.mp4",
+      "repoUrl": "https://github.com/JordanLmb/ev-bms-showcase",
+      "demoUrl": "https://ev-bms-showcase.vercel.app",
+      "isPrivate": false
+    },
     {
       "id": "card-value",
       "title": "CardValue - Visualiseur JCC",

@@ -11,6 +11,14 @@ const nextConfig: NextConfig = {
         source: "/CardValue/:path*",
         destination: "https://card-value-ashen.vercel.app/CardValue/:path*",
       },
+      {
+        source: "/bms",
+        destination: "https://ev-bms-showcase.vercel.app",
+      },
+      {
+        source: "/bms/:path*",
+        destination: "https://ev-bms-showcase.vercel.app/:path*",
+      },
     ];
   },
 };
