@@ -55,7 +55,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             onTouchStart={() => setIsHovered(false)}
         >
             {/* Visual Header (Image/Video) */}
-            <div className="h-48 w-full bg-gray-900/50 relative overflow-hidden">
+            <div className="aspect-video w-full bg-gray-900/50 relative overflow-hidden">
                 {project.image && !project.image.endsWith('placeholder.jpg') ? (
                     <img
                         src={project.image}
