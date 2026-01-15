@@ -4,7 +4,7 @@
       "id": "bms-simulator",
       "title": "Virtual HIL BMS Simulator",
       "slug": "bms-simulator",
-      "description": "Browser-based HIL simulator running real Python BMS logic via Web Workers. Demonstrates advanced safety-critical QA Automation.",
+      "description": "HIL simulator running Python BMS logic in-browser. Verifies safety-critical systems with advanced QA Automation.",
       "techStack": [
         "Next.js 15",
         "Web Workers",
@@ -61,7 +61,7 @@
       "id": "bms-simulator",
       "title": "Simulateur Virtual HIL BMS",
       "slug": "bms-simulator",
-      "description": "Simulateur HIL exécutant une vraie logique BMS Python dans le navigateur via Web Workers. Démontre l'automatisation QA critique.",
+      "description": "Simulateur HIL exécutant une logique BMS Python dans le navigateur. Vérifie les systèmes critiques via l'automatisation QA.",
       "techStack": [
         "Next.js",
         "Web Workers",
