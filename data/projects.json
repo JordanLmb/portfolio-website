@@ -6,8 +6,8 @@
       "slug": "card-database",
       "description": "Self-hosted, offline-first Pokémon database. Renders 10,000+ high-res assets instantly.",
       "techStack": [
-        "Next.js 15",
-        "React 19",
+        "Next.js",
+        "React",
         "TypeScript",
         "Tailwind CSS",
         "Framer Motion",
@@ -86,8 +86,8 @@
       "slug": "card-database",
       "description": "Base de données Pokémon auto-hébergée. Rendu instantané de 10 000+ cartes haute résolution.",
       "techStack": [
-        "Next.js 15",
-        "React 19",
+        "Next.js",
+        "React",
         "TypeScript",
         "Tailwind CSS",
         "Framer Motion",
