@@ -8,17 +8,13 @@
       "techStack": [
         "Next.js",
         "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
         "PostgreSQL",
         "Drizzle ORM",
         "Docker",
-        "MinIO",
-        "Cloudflare Tunnel"
+        "Cloudflare"
       ],
-      "image": "/images/card_database.png",
-      "video": "/images/card_database.mp4",
+      "image": "/images/card-db.png",
+      "video": "/images/card-db.mp4",
       "repoUrl": "",
       "demoUrl": "https://cards.jordanlmb.com/",
       "isPrivate": true
@@ -88,17 +84,13 @@
       "techStack": [
         "Next.js",
         "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "Framer Motion",
         "PostgreSQL",
         "Drizzle ORM",
         "Docker",
-        "MinIO",
-        "Cloudflare Tunnel"
+        "Cloudflare"
       ],
-      "image": "/images/card_database.png",
-      "video": "/images/card_database.mp4",
+      "image": "/images/card-db.png",
+      "video": "/images/card-db.mp4",
       "repoUrl": "",
       "demoUrl": "https://cards.jordanlmb.com/",
       "isPrivate": true
