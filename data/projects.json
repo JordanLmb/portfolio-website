@@ -1,6 +1,29 @@
 {
   "en": [
     {
+      "id": "card-database",
+      "title": "CardDB - High-Performance TCG Database",
+      "slug": "card-database",
+      "description": "Self-hosted, offline-first Pokémon database. Renders 10,000+ high-res assets instantly.",
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "PostgreSQL",
+        "Drizzle ORM",
+        "Docker",
+        "MinIO",
+        "Cloudflare Tunnel"
+      ],
+      "image": "/images/card_database.png",
+      "video": "/images/card_database.mp4",
+      "repoUrl": "",
+      "demoUrl": "https://cards.jordanlmb.com/",
+      "isPrivate": true
+    },
+    {
       "id": "bms-simulator",
       "title": "Virtual HIL BMS Simulator",
       "slug": "bms-simulator",
@@ -57,6 +80,29 @@
     }
   ],
   "fr": [
+    {
+      "id": "card-database",
+      "title": "CardDB - Base de Données JCC Haute Performance",
+      "slug": "card-database",
+      "description": "Base de données Pokémon auto-hébergée. Rendu instantané de 10 000+ cartes haute résolution.",
+      "techStack": [
+        "Next.js 15",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "PostgreSQL",
+        "Drizzle ORM",
+        "Docker",
+        "MinIO",
+        "Cloudflare Tunnel"
+      ],
+      "image": "/images/card_database.png",
+      "video": "/images/card_database.mp4",
+      "repoUrl": "",
+      "demoUrl": "https://cards.jordanlmb.com/",
+      "isPrivate": true
+    },
     {
       "id": "bms-simulator",
       "title": "Simulateur Virtual HIL BMS",
