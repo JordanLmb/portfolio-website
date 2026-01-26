@@ -15,9 +15,9 @@
       ],
       "image": "/images/dockettrack.png",
       "video": "/images/dockettrack.mp4",
-      "repoUrl": "",
-      "demoUrl": "",
-      "isPrivate": true
+      "repoUrl": "https://github.com/JordanLmb/dockettrack",
+      "demoUrl": "https://dockettrack.jordanlmb.com",
+      "isPrivate": false
     },
     {
       "id": "card-database",
@@ -110,9 +110,9 @@
       ],
       "image": "/images/dockettrack.png",
       "video": "/images/dockettrack.mp4",
-      "repoUrl": "",
-      "demoUrl": "",
-      "isPrivate": true
+      "repoUrl": "https://github.com/JordanLmb/dockettrack",
+      "demoUrl": "https://dockettrack.jordanlmb.com",
+      "isPrivate": false
     },
     {
       "id": "card-database",
