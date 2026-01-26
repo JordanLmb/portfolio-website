@@ -1,6 +1,25 @@
 {
   "en": [
     {
+      "id": "docket-track",
+      "title": "DocketTrack",
+      "slug": "docket-track",
+      "description": "High-performance legal case management system. Streamlines process tracking with zero-latency UI.",
+      "techStack": [
+        "Go",
+        "React",
+        "SQLite",
+        "TypeScript",
+        "Tailwind CSS",
+        "Docker"
+      ],
+      "image": "/images/dockettrack.png",
+      "video": "/images/dockettrack.mp4",
+      "repoUrl": "",
+      "demoUrl": "",
+      "isPrivate": true
+    },
+    {
       "id": "card-database",
       "title": "CardDB - High-Performance TCG Database",
       "slug": "card-database",
@@ -76,6 +95,25 @@
     }
   ],
   "fr": [
+    {
+      "id": "docket-track",
+      "title": "DocketTrack",
+      "slug": "docket-track",
+      "description": "Système de gestion de dossiers juridiques haute performance. Suivi des processus et UI sans latence.",
+      "techStack": [
+        "Go",
+        "React",
+        "SQLite",
+        "TypeScript",
+        "Tailwind CSS",
+        "Docker"
+      ],
+      "image": "/images/dockettrack.png",
+      "video": "/images/dockettrack.mp4",
+      "repoUrl": "",
+      "demoUrl": "",
+      "isPrivate": true
+    },
     {
       "id": "card-database",
       "title": "CardDB - Base de Données JCC Haute Performance",
