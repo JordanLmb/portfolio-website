@@ -44,7 +44,7 @@
       "slug": "bms-simulator",
       "description": "Browser-based HIL simulator running Python BMS logic. Verifies safety systems via QA Automation.",
       "techStack": [
-        "Next.js 15",
+        "Next.js",
         "Web Workers",
         "Python (Pyodide)",
         "Zustand",
@@ -63,7 +63,7 @@
       "slug": "card-value",
       "description": "Track collection values for Pokemon, Magic, and Yu-Gi-Oh with CSV upload and cloud persistence.",
       "techStack": [
-        "Next.js 16",
+        "Next.js",
         "React",
         "TypeScript",
         "Tailwind CSS",
@@ -158,7 +158,7 @@
       "slug": "card-value",
       "description": "Suivez la valeur de vos collections Pokemon, Magic et Yu-Gi-Oh avec upload CSV et sauvegarde cloud.",
       "techStack": [
-        "Next.js 16",
+        "Next.js",
         "React",
         "TypeScript",
         "Tailwind CSS",
